@@ -1,0 +1,25 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+nav { display: flex; justify-content: space-between; padding: 20px 50px; background: #fff; align-items: center; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+
+.hero { 
+    height: 80vh; 
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/kuet-hero.jpg'); 
+    background-size: cover; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    text-align: center;
+}
+
+.hero-content h1 { font-size: 3rem; margin-bottom: 10px; }
+button { padding: 15px 30px; background: #ff4500; border: none; color: white; cursor: pointer; border-radius: 5px; font-weight: bold; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2rem; }
+    nav { padding: 20px; }
+}
