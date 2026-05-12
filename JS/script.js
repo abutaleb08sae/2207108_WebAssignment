@@ -1,3 +1,3 @@
 document.getElementById('cta-btn').addEventListener('click', function() {
-    alert('Thank you for your interest in TRY! Redirecting to our contact page...');
+    alert('Thank you for your interest in TRY! We are excited to have you.');
 });
