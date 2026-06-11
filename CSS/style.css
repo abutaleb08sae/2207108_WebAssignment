@@ -311,6 +311,80 @@ button:hover { background: #e65c00; transform: translateY(-3px); }
     display: block;
 }
 
+.executive-container {
+    padding: 80px 10%;
+    background-color: #f8f9fa;
+    min-height: 80vh;
+}
+
+.panel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.member-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+    border-left: 5px solid #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.member-badge {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rank-president { border-left-color: #d90429; grid-column: 1 / -1; max-width: 500px; margin: 0 auto 20px auto; width: 100%; }
+.rank-president .member-badge { background: #fff5f5; color: #d90429; border: 1px solid #d90429; }
+
+.rank-vp { border-left-color: #ff6600; }
+.rank-vp .member-badge { background: #fff7ed; color: #ff6600; border: 1px solid #ff6600; }
+
+.rank-gs { border-left-color: #0056b3; }
+.rank-gs .member-badge { background: #eff6ff; color: #0056b3; border: 1px solid #0056b3; }
+
+.rank-member { border-left-color: #2b9348; }
+.rank-member .member-badge { background: #f0fdf4; color: #2b9348; border: 1px solid #2b9348; }
+
+.member-info h3 {
+    font-size: 1.3rem;
+    color: #0d1b2a;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.member-info .dept {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 12px;
+}
+
+.member-info .phone {
+    font-size: 0.85rem;
+    color: #718096;
+    font-weight: 500;
+}
+
 .site-footer {
     background-color: #11693e;
     color: #ffffff;
@@ -447,11 +521,14 @@ button:hover { background: #e65c00; transform: translateY(-3px); }
     .about-content {
         flex-direction: column;
     }
-    .about-container {
+    .about-container, .executive-container {
         padding: 60px 5%;
     }
     .footer-grid-layout {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .rank-president {
+        max-width: 100%;
     }
 }
 
