@@ -16,6 +16,16 @@ namespace TRY_KUET_WEBSITE.Controllers
             return View();
         }
 
+        public IActionResult Activities()
+        {
+            return View();
+        }
+
+        public IActionResult ExecutivePanel()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
