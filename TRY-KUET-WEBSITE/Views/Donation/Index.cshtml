@@ -1,0 +1,65 @@
+@model IEnumerable<TRY_KUET_WEBSITE.Models.Donation>
+
+<div style="max-width:1200px; margin: 40px auto; padding: 0 20px; font-family:'Poppins', sans-serif;">
+
+    <h2 style="text-align:center; color:#0d1b2a;">Choose How You Want to Assist</h2>
+    <p style="text-align:center; margin-bottom:30px; color:#4a5568;">Select an initiative category below to fill out your entry form.</p>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-bottom:50px;">
+        <div style="background:#fff; border-top: 4px solid #dc2626; border-radius:8px; padding:25px; box-shadow:0 4px 6px rgba(0,0,0,0.05); text-align:center;">
+            <h3 style="color:#dc2626;">🩸 Donate Blood</h3>
+            <p style="font-size:0.9rem; color:#4a5568;">Register your blood group inside our active registry platform to help medical cases.</p>
+            <a href="@Url.Action("Create", "Donations", new { type = "Blood" })" style="display:inline-block; margin-top:15px; padding:8px 16px; background:#dc2626; color:white; border-radius:4px; text-decoration:none; font-weight:600;">Open Form</a>
+        </div>
+
+        <div style="background:#fff; border-top: 4px solid #16a34a; border-radius:8px; padding:25px; box-shadow:0 4px 6px rgba(0,0,0,0.05); text-align:center;">
+            <h3 style="color:#16a34a;">💰 Money Contribution</h3>
+            <p style="font-size:0.9rem; color:#4a5568;">Provide transparent financial aid updates tracking ongoing campus emergency funds.</p>
+            <a href="@Url.Action("Create", "Donations", new { type = "Money" })" style="display:inline-block; margin-top:15px; padding:8px 16px; background:#16a34a; color:white; border-radius:4px; text-decoration:none; font-weight:600;">Open Form</a>
+        </div>
+
+        <div style="background:#fff; border-top: 4px solid #ff6600; border-radius:8px; padding:25px; box-shadow:0 4px 6px rgba(0,0,0,0.05); text-align:center;">
+            <h3 style="color:#ff6600;">📦 Voluntering / Others</h3>
+            <p style="font-size:0.9rem; color:#4a5568;">Submit clothes collections data or apply to assist active physical rescue efforts.</p>
+            <a href="@Url.Action("Create", "Donations", new { type = "Other" })" style="display:inline-block; margin-top:15px; padding:8px 16px; background:#ff6600; color:white; border-radius:4px; text-decoration:none; font-weight:600;">Open Form</a>
+        </div>
+    </div>
+
+    <h3 style="color:#0d1b2a; margin-bottom:15px; border-left:4px solid #ff6600; padding-left:10px;">Global Tracker History</h3>
+    <div style="overflow-x:auto; background:#fff; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.05);">
+        <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.95rem;">
+            <thead>
+                <tr style="background:#0d1b2a; color:white;">
+                    <th style="padding:12px 15px;">Volunteer Name</th>
+                    <th style="padding:12px 15px;">Initiative Type</th>
+                    <th style="padding:12px 15px;">Contact Info</th>
+                    <th style="padding:12px 15px;">Details Provided</th>
+                    <th style="padding:12px 15px;">Submission Time</th>
+                    <th style="padding:12px 15px; text-align:center;">Database Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr style="border-bottom:1px solid #e2e8f0;">
+                        <td style="padding:12px 15px; font-weight:600;">@item.FullName</td>
+                        <td style="padding:12px 15px;">
+                            <span style="padding:4px 8px; border-radius:4px; font-size:0.8rem; font-weight:600;
+                                background:@(item.DonationType == "Blood" ? "#fee2e2" : item.DonationType == "Money" ? "#dcfce7" : "#ffedd5");
+                                color:@(item.DonationType == "Blood" ? "#991b1b" : item.DonationType == "Money" ? "#166534" : "#9a3412");">
+                                @item.DonationType
+                            </span>
+                        </td>
+                        <td style="padding:12px 15px;">@item.ContactNumber</td>
+                        <td style="padding:12px 15px;">@item.Details</td>
+                        <td style="padding:12px 15px; font-size:0.85rem; color:#718096;">@item.SubmittedAt.ToString("g")</td>
+                        <td style="padding:12px 15px; text-align:center;">
+                            <a href="@Url.Action("Edit", "Donations", new { id = item.Id })" style="color:#0056b3; margin-right:10px; text-decoration:none; font-weight:600;">✏️ Update</a> |
+                            <a href="@Url.Action("Delete", "Donations", new { id = item.Id })" style="color:#dc2626; margin-left:10px; text-decoration:none; font-weight:600;">🗑️ Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

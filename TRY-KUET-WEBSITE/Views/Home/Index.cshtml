@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<header class="hero">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Targeting Resourcefulness of Youth</h1>
+            <p>Empowering communities, one initiative at a time at KUET.</p>
+            <a href="@Url.Action("Index", "Donations")" id="cta-btn" style="display: inline-block; padding: 12px 28px; background: #ff6600; color: #ffffff; text-decoration: none; font-weight: 700; border-radius: 6px; font-family: 'Poppins', sans-serif; box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3); transition: background 0.3s ease;">Join Our Mission</a>
+        </div>
+    </div>
+</header>
+
+<section id="about-section" class="about-container">
+    <div class="about-header">
+        <h2>About TRY</h2>
+        <div class="underline"></div>
+        <p class="tagline">Official Revelation: 21st February 2014</p>
+    </div>
+
+    <div class="about-content">
+        <div class="about-text">
+            <h3>Our Story & Vision</h3>
+            <p>TRY is a volunteer organization made up of KUETians with an indomitable desire and mentality to stand beside people. What started with the KUETians and the people around the campus has now expanded into impactful work across the entire country.</p>
+            <p>The main purpose of TRY is simply to <strong>make people smile by standing beside them</strong>. Working for humanity and endangered populations, each member of TRY embraces this humanitarian motivation for a lifetime.</p>
+
+            <div class="funding-box">
+                <h4>How We Are Funded</h4>
+                <p>Our initiatives are powered completely by the spirit of KUET. The Hall Collection, generous grants from KUET Alumni, and a small portion of the Student's Hall Dues form the core of TRY's donations.</p>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card permanent">
+                <span class="badge">Permanent</span>
+                <h3>Core Initiatives</h3>
+                <ul>
+                    <li>Distribution of winter clothes</li>
+                    <li>Cycling to deliver blankets to helpless people</li>
+                    <li>Iftar programs during Ramadan</li>
+                    <li>Medical funds for sick KUETians</li>
+                </ul>
+            </div>
+
+            <div class="project-card temporary">
+                <span class="badge gray">Active Response</span>
+                <h3>Temporary Projects</h3>
+                <ul>
+                    <li>Scholarships for underprivileged but talented students</li>
+                    <li>Emergency flood victim relief operations</li>
+                    <li>Immediate support to families in crisis</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="achievements-section" style="background-color: #0d1b2a; padding: 60px 20px; text-align: center; font-family: 'Poppins', sans-serif;">
+    <h2 style="color: #38bdf8; font-size: 2.2rem; font-weight: 600; margin-bottom: 40px; letter-spacing: 0.5px;">Awards & Achievements</h2>
+
+    <div class="achievements-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; padding: 0 10px;">
+
+        <div class="achievement-card" style="background-color: #1e293b; border-radius: 12px; padding: 30px; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s ease;">
+            <div class="trophy-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🏆</div>
+            <h3 style="color: #ffffff; font-size: 1.25rem; font-weight: 600; margin: 0 0 5px 0;">Best Social Service Youth Club</h3>
+            <div class="achievement-year" style="color: #38bdf8; font-weight: 600; font-size: 1.1rem; margin-bottom: 12px;">2025</div>
+            <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin: 0;">Achieved recognition for our widespread humanitarian response setups, outstanding winter kit distributions, and immediate blood donation management setups inside Khulna division.</p>
+        </div>
+
+        <div class="achievement-card" style="background-color: #1e293b; border-radius: 12px; padding: 30px; text-align: left; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s ease;">
+            <div class="trophy-icon" style="font-size: 2.5rem; margin-bottom: 15px;">🏆</div>
+            <h3 style="color: #ffffff; font-size: 1.25rem; font-weight: 600; margin: 0 0 5px 0;">Outstanding Campus Footprint Award</h3>
+            <div class="achievement-year" style="color: #38bdf8; font-weight: 600; font-size: 1.1rem; margin-bottom: 12px;">2024</div>
+            <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin: 0;">Awarded by the university administration for exceptional leadership in raising swift medical emergency funds for students and ensuring transparency in all student-led utility contributions.</p>
+        </div>
+
+    </div>
+</section>
